@@ -1,4 +1,4 @@
-docker kill busybox &2>/dev/null
+
 
 while true 
 do
