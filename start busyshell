@@ -3,9 +3,9 @@
 while true 
 do
 USER=`whoami`
-read -p "busyshell@"$USER"" SHELLB
+read -p "busyshell@$USER" SH
 case $SHELLB in 
     exitd) echo exited;exit
 esac
-docker run -it busybox $SHELLB
+docker run -it busybox $SH
 done
