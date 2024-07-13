@@ -1,0 +1,11 @@
+docker kill busybox &2>/dev/null
+
+while true 
+do
+USER=`whoami`
+read -p "busyshell@"$USER"" SHELLB
+case $SHELLB in 
+    exitd) echo exited;exit
+esac
+docker run -it busybox $SHELLB
+done
